@@ -12,6 +12,7 @@
 //   let stations = try? newJSONDecoder().decode(Stations.self, from: jsonData)
 
 import Foundation
+import MapKit
 
 // MARK: - Station
 struct Station: Codable {
@@ -33,6 +34,10 @@ struct Station: Codable {
         case countryCode = "countryCode"
         case longitude = "longitude"
         case latitude = "latitude"
+    }
+    
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
     }
 }
 

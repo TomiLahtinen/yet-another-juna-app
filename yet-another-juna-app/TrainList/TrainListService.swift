@@ -10,9 +10,9 @@ import Foundation
 
 class TrainListService {
     
-    public func loadTrains(_ callback: @escaping (Trains) -> ()){
+    public func loadTrains(stationShortCode: String, _ callback: @escaping (Trains) -> ()){
         let session = URLSession.shared
-        let url = URL(string: "https://rata.digitraffic.fi/api/v1/live-trains/station/TPE")!
+        let url = URL(string: "https://rata.digitraffic.fi/api/v1/live-trains/station/\(stationShortCode)")!
         
         let task = session.dataTask(with: url, completionHandler: { data, response, error in
             if let _ = error {

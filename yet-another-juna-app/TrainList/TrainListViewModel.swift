@@ -12,18 +12,14 @@ import Combine
 
 final class TrainListViewModel: BindableObject {
     
-    init(){
-        loadTrains()
-    }
-    
     var trains: Trains = [] {
         didSet {
             didChange.send(self)
         }
     }
     
-    private func loadTrains() {
-        TrainListService().loadTrains {
+    func loadTrains(stationShortCode: String) {
+        TrainListService().loadTrains(stationShortCode: stationShortCode) {
             self.trains = $0
         }
     }

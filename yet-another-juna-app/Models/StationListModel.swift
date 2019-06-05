@@ -24,7 +24,7 @@ final class StationListModel: BindableObject {
     
     private func loadStations(){
         StationListService().loadStations {
-            self.stations = $0
+            self.stations = $0.filter { $0.passengerTraffic ?? false }
         }
     }
     

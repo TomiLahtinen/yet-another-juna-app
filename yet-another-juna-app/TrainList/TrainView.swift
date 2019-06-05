@@ -24,24 +24,19 @@ struct TrainView : View {
                 Text(String(train.departureDate!))
             }
             Spacer()
-            Text(String(self.stationName!))
+            Text(String(stationName ?? "???"))
                 .font(.subheadline)
                 .color(.gray)
         }
     }
     
     var stationName: String? {
-        let shortCode = train.timeTableRows!.last!.stationShortCode!
-        guard let _ = stationListModel else {
+        let shortCode = train.timeTableRows?.last?.stationShortCode
+        guard let _ = stationListModel, let _ = shortCode else {
             return shortCode
         }
         
-        return stationListModel?.stations.first {
-            $0.stationShortCode == shortCode
-        }
-        .map {
-            $0.stationName ?? shortCode
-        }
+        return "self"
     }
 }
 

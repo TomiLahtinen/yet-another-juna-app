@@ -10,22 +10,23 @@ import SwiftUI
 
 struct TrainListView: View {
     
+    var station: Station
+    var stationListModel: StationListModel
     @State var model = TrainListViewModel()
-    @State var stationModel = StationListModel()
+    
+    init(station: Station, stationListModel: StationListModel) {
+        self.station = station
+        self.stationListModel = stationListModel
+        
+    }
     
     var body: some View {
         NavigationView {
             List(model.trains.identified(by: \.trainNumber!)) { train in
-                TrainView(train: train, stationListModel: self.stationModel)
+                TrainView(train: train, stationListModel: self.stationListModel)
             }
-        }
+        }.onAppear{
+            self.model.loadTrains(stationShortCode: self.station.stationShortCode!)
+        }.navigationBarTitle(Text(self.station.stationName!))
     }
 }
-
-#if DEBUG
-struct TrainListView_Previews : PreviewProvider {
-    static var previews: some View {
-        TrainListView(model: TrainListViewModel())
-    }
-}
-#endif

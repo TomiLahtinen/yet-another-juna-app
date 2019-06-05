@@ -19,6 +19,9 @@
 		56B7EA6722A7DBBD00516404 /* StationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7EA6622A7DBBD00516404 /* StationListModel.swift */; };
 		56B7EA6922A7DC4F00516404 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7EA6822A7DC4F00516404 /* Station.swift */; };
 		56B7EA6B22A7DE4400516404 /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7EA6A22A7DE4400516404 /* StationService.swift */; };
+		56B7EA6E22A7F0B500516404 /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7EA6D22A7F0B500516404 /* StationListView.swift */; };
+		56B7EA7022A7F35F00516404 /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7EA6F22A7F35F00516404 /* StationDetailView.swift */; };
+		56B7EA7222A7F44D00516404 /* StationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7EA7122A7F44D00516404 /* StationMapView.swift */; };
 		56EE79AA22A6597100B94398 /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE79A922A6597100B94398 /* Train.swift */; };
 		56EE79AC22A65C5600B94398 /* TrainListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE79AB22A65C5600B94398 /* TrainListService.swift */; };
 		56EE79AE22A65F6100B94398 /* TrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE79AD22A65F6100B94398 /* TrainView.swift */; };
@@ -60,6 +63,9 @@
 		56B7EA6622A7DBBD00516404 /* StationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListModel.swift; sourceTree = "<group>"; };
 		56B7EA6822A7DC4F00516404 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		56B7EA6A22A7DE4400516404 /* StationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
+		56B7EA6D22A7F0B500516404 /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
+		56B7EA6F22A7F35F00516404 /* StationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailView.swift; sourceTree = "<group>"; };
+		56B7EA7122A7F44D00516404 /* StationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapView.swift; sourceTree = "<group>"; };
 		56EE79A922A6597100B94398 /* Train.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
 		56EE79AB22A65C5600B94398 /* TrainListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListService.swift; sourceTree = "<group>"; };
 		56EE79AD22A65F6100B94398 /* TrainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainView.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		5687223B22A65225000DF9A5 /* yet-another-juna-app */ = {
 			isa = PBXGroup;
 			children = (
+				56B7EA6C22A7F0A100516404 /* StationList */,
 				56B7EA6522A7DBAA00516404 /* Models */,
 				56EE79A822A6596000B94398 /* TrainList */,
 				5687223C22A65225000DF9A5 /* AppDelegate.swift */,
@@ -159,6 +166,16 @@
 				56B7EA6A22A7DE4400516404 /* StationService.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		56B7EA6C22A7F0A100516404 /* StationList */ = {
+			isa = PBXGroup;
+			children = (
+				56B7EA6D22A7F0B500516404 /* StationListView.swift */,
+				56B7EA6F22A7F35F00516404 /* StationDetailView.swift */,
+				56B7EA7122A7F44D00516404 /* StationMapView.swift */,
+			);
+			path = StationList;
 			sourceTree = "<group>";
 		};
 		56EE79A822A6596000B94398 /* TrainList */ = {
@@ -310,9 +327,12 @@
 				56EE79AA22A6597100B94398 /* Train.swift in Sources */,
 				56EE79AE22A65F6100B94398 /* TrainView.swift in Sources */,
 				5687223D22A65225000DF9A5 /* AppDelegate.swift in Sources */,
+				56B7EA6E22A7F0B500516404 /* StationListView.swift in Sources */,
 				56EE79AC22A65C5600B94398 /* TrainListService.swift in Sources */,
+				56B7EA7222A7F44D00516404 /* StationMapView.swift in Sources */,
 				5687223F22A65225000DF9A5 /* SceneDelegate.swift in Sources */,
 				56B7EA6B22A7DE4400516404 /* StationService.swift in Sources */,
+				56B7EA7022A7F35F00516404 /* StationDetailView.swift in Sources */,
 				5687224122A65225000DF9A5 /* TrainListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
